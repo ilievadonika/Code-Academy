@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(){
+	int number = 15;
+	int index = 2 ;
+	int bitStatus;
+
+	bitStatus = number ^ (1 << index);
+	printf("%d", bitStatus);
+	return 0;
+}
+
