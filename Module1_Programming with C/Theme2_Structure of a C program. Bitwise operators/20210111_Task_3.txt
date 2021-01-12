@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int izchistiBitna(int number, int index);
+
+int main(){
+	int number;
+	int index;
+	izchistiBitna(15, 2);
+	return 0;
+}
+
+int izchistiBitna(int number, int index){
+	int bitStatus;
+
+	bitStatus = number & ~(1 << index);
+	printf("%d", bitStatus);
+}
