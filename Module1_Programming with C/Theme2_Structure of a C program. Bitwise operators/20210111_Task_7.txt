@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int evenAndOddBit(int number);
+
+int main(){
+	int number;
+	evenAndOddBit(15);
+	return 0;
+}
+
+int evenAndOddBit(int number){
+	int bitStatus;
+		int mask = 0x55;
+		bitStatus = number & mask;
+	
+	printf("%d", bitStatus);
+}
