@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int countDifferentBits(int number);
+
+int main(){
+	int number;
+	countDifferentBits(15);
+	return 0;
+}
+
+int countDifferentBits(int number){
+	unsigned int count = 0; 
+    while (number) { 
+        count += number & 1; 
+        number >>= 1; 
+    } 
+	printf("%d", count);
+}
