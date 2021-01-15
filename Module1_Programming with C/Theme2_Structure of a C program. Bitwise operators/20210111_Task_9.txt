@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int changeBitsToZero(int number);
+
+int main(){
+	int number;
+	changeBitsToZero(18);
+	return 0;
+}
+
+int changeBitsToZero(int number){
+	int bitPosition;
+	int mask = 0xF07;
+
+	bitPosition = number & mask;
+	
+	printf("%d", bitPosition);
+}

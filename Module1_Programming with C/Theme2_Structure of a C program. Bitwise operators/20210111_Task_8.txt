@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int seniorBitPosition(int number);
+
+int main(){
+	int number;
+	seniorBitPosition(4);
+	return 0;
+}
+
+int seniorBitPosition(int number){
+	int bitPosition = 1;
+		int mask = 1 << bitPosition;
+		while (mask < number)
+		{
+			bitPosition++;
+			mask = 1 << bitPosition;
+		}
+	
+	printf("%d", bitPosition);
+}

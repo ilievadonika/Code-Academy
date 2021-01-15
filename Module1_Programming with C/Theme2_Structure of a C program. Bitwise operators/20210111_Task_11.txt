@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int sumOfTwos(int number);
+
+int main(){
+	int number;
+	sumOfTwos(15);
+	return 0;
+}
+
+int sumOfTwos(int number){
+	int mask = 1;
+
+	for(int i = 0; i < number; ++i) {
+		mask <<= 1;
+		int x = 1 << i;
+		if((number & mask)) {
+			printf("%d\n", x);
+		}
+	}
+}

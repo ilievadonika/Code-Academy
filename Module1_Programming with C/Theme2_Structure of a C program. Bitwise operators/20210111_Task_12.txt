@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int vdigniBit(int number);
+
+int main(){
+	int number;
+	vdigniBit(32000);
+	return 0;
+}
+
+int vdigniBit(int number){
+	int mask = 0x88;
+	int result = 0;
+
+	result = number | mask;
+	printf("%d\n", result);
+
+}

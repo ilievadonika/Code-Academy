@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(){
+	unsigned n = 0xFFF;
+	unsigned index = 4;
+	
+	n = n >> index;
+	printf("%d\n", n);
+	return 0;
+}
+
