@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(){
+	unsigned char countCampers = 3;
+	unsigned char countCaravans = 3;
+	unsigned char priceCampers = 100;
+	unsigned char priceCaravans = 90;
+
+	printf("Dobre doshli v Karavani Kempeti pod naem\n");
+	printf("Ako zelaete karavana natisnete 1\n");
+	printf("Ako zelaete kemper natisnete 2\n");
+
+	int result = scanf("%d", &result);;
+
+	return 0;
+}

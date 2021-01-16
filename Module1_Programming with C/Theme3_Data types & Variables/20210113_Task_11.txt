@@ -1,0 +1,73 @@
+#include <stdio.h>
+/*Домати- 4.5 лв.за килограм, Брашно 1.80 лв. за килограм,
+Кисело мляко - 0.50 лв. за брой, Сладолед на фунийки 0.60 лв. броя
+Бонбони 1.50 лв. за килограм, Близалки 0.15 лв. за брой.
+*/
+
+int main(void){
+	float tomatoPrice = 4.5;
+	float flourPrice = 1.80;
+	float yogurtPrice = 0.5;
+	float iceCreamPrice = 1.5;
+	float candiesPrice = 1.50;
+	float lollipopPrice = 0.15;
+
+	float tomatoWeight = 0;
+	float flourWeight = 0;
+	unsigned short int yogurtCount = 0;
+	unsigned short int iceCreamCount = 0;
+	float candiesWeight = 0;
+	unsigned short int lollipopCount = 0;
+
+	unsigned char clientChoice = 0;
+	float totalPrice = 0;
+
+	printf("Hello, welcome to our store! Today we offer - fresh tomatoes, flour, yogurt, ice cream cones, candies and lollipops.\n");
+	
+	while(clientChoice != 7){
+		printf("Select a product by entering the appropriate number:\n");
+		printf("1 - tomatoes\n");
+		printf("2 - flour\n"); 
+		printf("3 - yogurt \n");
+		printf("4 - ice cream cones\n");
+		printf("5 - candies\n"); 
+		printf("6 - lollipops\n");
+		printf("7 - End\n");
+
+		scanf("%d",&clientChoice);
+
+		if (clientChoice == 1) {
+		printf("How many kilograms of tomatoes will you want?\n");
+		scanf("%f",&tomatoWeight);
+		}
+		if (clientChoice == 2) {
+		printf("How many kilograms of flour will you want?\n");
+		scanf("%f",&flourWeight);
+		}
+		if (clientChoice == 3) {
+		printf("How many buckets of yogurt will you want?\n");
+		scanf("%d",&yogurtCount);
+		}
+		if (clientChoice == 4) {
+		printf("How many ice cream cones will you want?\n");
+		scanf("%d",&iceCreamCount);
+		}
+		if (clientChoice == 5) {
+		printf("How many kilograms / grams of candy will you want?\n");
+		scanf("%f",&candiesWeight);
+		}
+		if (clientChoice == 6) {
+		printf("How many lollipops will you want?\n");
+		scanf("%d",&lollipopCount);
+		}
+	}
+	totalPrice = tomatoPrice*tomatoWeight + 
+				flourPrice*flourWeight +
+				yogurtCount*yogurtPrice +
+				iceCreamCount*iceCreamPrice +
+				candiesWeight*candiesPrice +
+				lollipopCount*lollipopPrice;
+
+	printf("Total price: %.2f\n", totalPrice);
+
+	return 0;

@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(){
+	char number1 = 255;
+	char number2 = 10;
+
+	char result = number1 + number2;
+
+	printf("%d\n", result);
+	return 0;
+}

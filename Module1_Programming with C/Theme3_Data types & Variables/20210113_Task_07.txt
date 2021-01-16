@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+/*Дефинирайте променливи със стойност 24 212, -1 357 674, 1 357 674, -1 357
+674 000, 3 657 895 000.
+Изведете всяка променлива на екрана със printf()*/
+
+int main(){
+	unsigned short int n1 = 24212;
+	printf("%d\n", n1);
+	signed int n2 = -1357674;
+	printf("%d\n", n2);
+	int n3 = 1357674;
+	printf("%d\n", n3);
+	signed int n4 = -1357674000; 
+	printf("%d\n", n4);
+	unsigned int n5 = 3657895000;
+	printf("%u\n", n5);
+
+	return 0;
+}
