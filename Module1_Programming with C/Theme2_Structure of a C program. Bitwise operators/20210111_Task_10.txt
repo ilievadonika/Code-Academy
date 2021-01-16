@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+void removeBit(int number, int index);
+
+int main(){
+	int number;
+	int index;
+
+	removeBit(255, 2);
+	return 0;
+}
+
+void removeBit(int number, int index) {
+	int newIndex = 8 - index;
+	int newOrder = number << newIndex;
+	newOrder = number >> newIndex;
+
+	printf("%d\n", newOrder);
+}
+
