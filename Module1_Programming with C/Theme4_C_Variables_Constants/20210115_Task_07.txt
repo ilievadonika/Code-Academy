@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+/*Запишете в осем последователни байтове в паметта
+със стойност 0xBB(1011 1011) и разпечатайте съдържанието на
+горните байтове, ако типът е: double, signed long long, unsigned
+long long*/
+
+int main() {
+	double d = 0xBB;
+	signed long long l = 0xBBLL;
+	unsigned long long ul = 0xBBul;
+	printf("d = %f, l = %ld, ul = %ld", d, l, ul);
+
+return 0;
+}

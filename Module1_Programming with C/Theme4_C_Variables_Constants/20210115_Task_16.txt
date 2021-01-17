@@ -1,0 +1,25 @@
+/*Да се дефинира константата Пи (3.14159...) и да се напише
+функция, която изчислява лицето на окръжност по даден радиус (Пи * R * R).
+В main() да се извика горната функция с радиуси 1, 1.5, 13
+*/
+#include <stdio.h>
+
+#define CONST_PI (3.14159)
+void findS(float r);
+
+int main(void) {
+	int r1 = 1;
+	float r2 = 1.5;
+	int r3 = 13;
+
+	findS(r1);
+	findS(r2);
+	findS(r3);
+
+return 0;
+}
+
+void findS(float r){
+	float s = CONST_PI * r * r;
+	printf("%f\n", s);
+}

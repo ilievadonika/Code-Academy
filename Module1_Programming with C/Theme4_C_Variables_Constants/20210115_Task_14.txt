@@ -1,0 +1,21 @@
+/*Напишете глобална променлива, която увеличаваме с 1 във
+функция void test(). Извикайте функцията три пъти test() от main()
+принтирайте стойността на глобалната променлива.
+*/
+#include <stdio.h>
+
+void test();
+extern int g_x;
+
+int main(void) {
+	test();
+	test();
+	test();
+return 0;
+}
+int g_x = 1;
+
+void test(){
+	g_x += 1;
+	printf("%d\n", g_x);
+}

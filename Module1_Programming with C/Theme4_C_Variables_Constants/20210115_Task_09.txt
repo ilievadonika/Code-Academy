@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+	char s[] = "Hi";
+	int i;
+	for(i = 0; i < sizeof(s) - 1; i++){
+		printf("%c\n", s[i]);
+	}
+	printf("Number of characters: %d", i);
+return 0;
+}

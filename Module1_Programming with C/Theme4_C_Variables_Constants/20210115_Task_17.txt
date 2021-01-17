@@ -1,0 +1,35 @@
+/* Към задача 16 да се добави втора функция, която изчислява
+лицето на елипса по зададени два параметъра ( Пи * A * B)
+*/
+#include <stdio.h>
+
+#define CONST_PI (3.14159)
+void findSofCircle(float r);
+void findSofEllipse(float number1, float number2);
+
+int main(void) {
+	int r1 = 1;
+	float r2 = 1.5;
+	int r3 = 13;
+
+	float a = 1.5;
+	float b = 1;
+
+	findSofCircle(r1);
+	findSofCircle(r2);
+	findSofCircle(r3);
+
+	findSofEllipse(a, b);
+
+return 0;
+}
+
+void findSofCircle(float r){
+	float s = CONST_PI * r * r;
+	printf("%f\n", s);
+}
+
+void findSofEllipse(float a, float b){
+	float s = CONST_PI * a * b;
+	printf("%f\n", s);
+}
