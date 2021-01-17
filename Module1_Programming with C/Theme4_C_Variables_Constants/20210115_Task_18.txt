@@ -1,0 +1,48 @@
+/*Довършете задачата за кемперите от миналия път като добавите
+променлива, в която да се събират парите, които клиента дължи на компанията.
+Принтирайте резултата. Питайте клиента дали иска още налични продукти.
+*/
+#include <stdio.h>
+
+int main(){
+	unsigned char countCampers = 3;
+	unsigned char countCaravans = 3;
+	unsigned char priceCampers = 100;
+	unsigned char priceCaravans = 90;
+
+	unsigned int totalPrice = 0;
+
+	printf("Dobre doshli v Karavani Kempeti pod naem\n");
+	printf("Ako zelaete karavana natisnete 1\n");
+	printf("Ako zelaete kemper natisnete 2\n");
+
+	int result;
+	scanf("%d", &result);
+	
+	if(result == 1){
+		totalPrice += priceCaravans;
+	}else if(result == 2){
+		totalPrice += priceCampers;
+	}
+
+	printf("Zhelaete li oshte produkti?(yes = 1/no = 0)\n");
+	scanf("%d", &result);
+	
+	if(result == 1){
+		printf("Ako zelaete karavana natisnete 1\n");
+		printf("Ako zelaete kemper natisnete 2\n");
+		scanf("%d", &result);
+		if(result == 1){
+			totalPrice += priceCaravans;
+		} else if(result == 2){
+			totalPrice += priceCampers;
+		}
+	}else if(result == 0){
+		printf("Blagodrim za pokupkite!\n");
+	}
+	
+	printf("Vashata suma za plashtane e: %d", totalPrice);
+	
+	return 0;
+}
+
