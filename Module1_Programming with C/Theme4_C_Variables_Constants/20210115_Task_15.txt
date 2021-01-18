@@ -1,0 +1,19 @@
+/*Използвайте статична локална променлива, за да постигнете
+същото поведение, описано в задача 14
+*/
+#include <stdio.h>
+
+void test();
+
+int main(void) {
+	test();
+	test();
+	test();
+return 0;
+}
+
+void test(){
+	static int g_x = 1;
+	g_x += 1;
+	printf("%d\n", g_x);
+}
