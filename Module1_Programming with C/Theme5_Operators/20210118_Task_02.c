@@ -1,21 +1,17 @@
-/*Задача 1: имаме две променливи int x = 10; и int y = 10;
-създайте две променливи int true, false; На първата присвоете
-резултата от сравнението на х == у, а на втората х != у принтирайте
-с printf променливите true и false.
-*/
+/*Задача 2. какъв ще бъде резултатът в променливата true:
+int x = 10;
+int y = 10;
+int z = 30;
+int true = x==y+(z < y)!=20;*/
 #include <stdio.h>
 
 int main(void){
     int x = 10;
     int y = 10;
-    int true;
-    int false;
-
-    true = x == y;
-    false = x != y;
-
+    int z = 30;
+    int true = x == y + (z < y) != 20;
+ 
     printf("%d\n", true);
-    printf("%d\n", false);
 
     return 0;
 }
