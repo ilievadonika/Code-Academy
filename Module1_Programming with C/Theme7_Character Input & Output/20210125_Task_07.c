@@ -8,12 +8,12 @@ int main(void) {
     char buffer[minLenght];
     int c;
 
-    for (int i = 0; (c = getchar()) != EOF && c != '\n'; ++i) {
+    for (int i = 0; (c = getchar()) != EOF; ++i) {
         if (i < minLenght - 1)
             buffer[i] = c;
         else {
             if (i == minLenght - 1) {
-                line[i] = '\0';
+                buffer[i] = '\0';
                 printf("%s", buffer);
             }   
             printf("%c", c);
