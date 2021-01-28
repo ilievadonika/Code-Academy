@@ -10,8 +10,8 @@ int main(void) {
     int countLetters = 0;
     int countNumbers = 0;
     while ((c = getchar()) != EOF) {
-        if ((c >= 'a' && c >= 'z') ||
-            (c <= 'A' && c <= 'Z')) {
+        if ((c >= 'a' && c <= 'z') ||
+            (c >= 'A' && c <= 'Z')) {
             countLetters++;
         } else if (c >= '0' && c <= '9') {
             countNumbers++;
