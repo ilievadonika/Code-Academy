@@ -34,12 +34,12 @@ int main(void) {
     return 0;
 }
 void verifyTheUPC(int a[]) {
-    int sumOdd = a[0] + a[2] + a[4] + a[6] + a[8] +a [10]; //8
-    int sumEven = a[1] + a[3] + a[5] + a[7] + a[9];//26
-    int total = (sumOdd * 3) + sumEven;//24 +26 = 50
-    total -= 1; //49
-    total %= 10; // 9
-    total = 9 - total; //0
+    int sumOdd = a[0] + a[2] + a[4] + a[6] + a[8] +a [10]; 
+    int sumEven = a[1] + a[3] + a[5] + a[7] + a[9];
+    int total = (sumOdd * 3) + sumEven;
+    total -= 1; 
+    total %= 10; 
+    total = 9 - total; 
 
     if (total == a[11]) {
         printf("The code is valid.");
