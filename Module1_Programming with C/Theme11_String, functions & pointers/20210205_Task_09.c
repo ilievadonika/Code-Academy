@@ -15,6 +15,7 @@ int main(void) {
 
     printf("%d\n", atoi(s));
     itoa(n, t);
+    reverse(t);
     printf("%s", t);
 
     return 0;
@@ -32,6 +33,7 @@ void itoa(int n, char *str) {
 	*str = '\0';
 
 	reverse(str);
+    
     return;
 }
 
