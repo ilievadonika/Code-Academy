@@ -28,7 +28,7 @@ int main(void) {
             arr[i][j] = '.';
         }
     }
-    
+
     makeAlphabetArray(abcArr);
     arrManipulation(arr, abcArr);
 
@@ -51,10 +51,16 @@ void makeAlphabetArray(char arr[]){
 }
 
 void arrManipulation(char arr[10][10], char a[]){
-    int n = rand();
+    int n;
+    int n2;
     int i = 0;
-    if(arr[n][n] == '.')
-        arr[n][n] == 'a';
 
+    for(i = 0; i < 26; i++){
+        n = rand() % 4;
+        n2 = rand() % 4;
+
+        if(arr[n][n2] == '.')
+        arr[n][n2] = a[i];
+    }
     return;
 }
