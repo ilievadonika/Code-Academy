@@ -14,15 +14,23 @@
 Подсказка: Използвайте функциите srand() и rand() за да генерирате случайните числа. 
 Използвайте int n = rand() % 4; за да генерирате числа от 1 до 4*/
 #include <stdio.h>
+#include <stdlib.h>
+
+void arrManipulation(char arr[10][10], char a[]);
+void makeAlphabetArray(char arr[]);
 
 int main(void) {
     char arr[10][10];
+    char abcArr[26];
 
     for(int i = 0; i < 10; i++){
         for(int j = 0; j < 10; j++){
             arr[i][j] = '.';
         }
     }
+    
+    makeAlphabetArray(abcArr);
+    arrManipulation(arr, abcArr);
 
     for(int i = 0; i < 10; i++){
         for(int j = 0; j < 10; j++){
@@ -32,4 +40,21 @@ int main(void) {
     }
 
     return 0;
+}
+
+void makeAlphabetArray(char arr[]){
+    int size = 26;
+    for(int i = 0; i < size; i++) 
+        arr[i] = (char)(97 + i);
+
+    return;
+}
+
+void arrManipulation(char arr[10][10], char a[]){
+    int n = rand();
+    int i = 0;
+    if(arr[n][n] == '.')
+        arr[n][n] == 'a';
+
+    return;
 }
