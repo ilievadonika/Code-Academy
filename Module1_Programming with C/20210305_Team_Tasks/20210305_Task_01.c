@@ -37,13 +37,15 @@ int main(void){
     menu(warehouse);
     printf("The shelfs you can build with this materials are: %d", countShelfs(pshelfs, warehouse, needed));
 
+    free(needed);
+    free(warehouse);
+
     return 0;
 }
 
 int countShelfs(int *pshelfs, materials *warehouse, materials *needed) {
     int count = 0;
-    int temp = 0;
-    int size = sizeof(pshelfs)/sizeof(pshelfs[0]);
+    int size = 5;
 
     int countLP = warehouse->countLPlank / needed->countLPlank; 
     int countSP = warehouse->countSPlank / needed->countSPlank;
@@ -56,17 +58,16 @@ int countShelfs(int *pshelfs, materials *warehouse, materials *needed) {
     pshelfs[2] = countSB;
     pshelfs[3] = countBB;
     pshelfs[4] = countS;
-
+    
+    count = pshelfs[0];
+    
     for(int i = 0; i < size; i++){
-        for(int j = i + 1; j < size; j++) {
-            if(pshelfs[j] < pshelfs[i]) {
-                temp = pshelfs[i];
-                pshelfs[i] = pshelfs[j];
-                pshelfs[j] = temp;
-            }
+        printf("%d \n", pshelfs[i]);
+
+        if(count > pshelfs[i]){
+            count = pshelfs[i];
         }
     }
-    count = pshelfs[4];
 
     return count;
 }
