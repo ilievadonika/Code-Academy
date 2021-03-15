@@ -1,0 +1,3 @@
+float calculateGroupagePrice(t_Package * someArr,int size) success
+float calculateOnyByOnePrice (t_Package * someArr,int size) success
+void theBetterOffer(float group, float single) success
