@@ -3,7 +3,7 @@
 // #include <string.h>
 #include "header.h"
 
-char strArray[SIZE_ARR_1];
+char strArray[MAX_STRING_LEN];
 
 int main(void) {
     codeLet *legend = generateLegend("CODE.INP.txt");
